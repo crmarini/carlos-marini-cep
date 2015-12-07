@@ -45,8 +45,7 @@ public class EnderecoCepServiceImpl implements EnderecoCepService {
 		else{
 			endereco = converter.converterEntidade(enderecoCepDTO);
 			dao.CadastrarEnderecoCep(endereco);
-			enderecoCepDTO.setStatus("Sucesso");
-			return enderecoCepDTO;
+			return new EnderecoCepDTO("SUCESSO", "O endereço foi cadastrado com sucesso.");
 		}
 	}
 	
