@@ -10,7 +10,7 @@ public class ApplicationConfiguration extends Application {
 	private Set<Class<?>> empty = new HashSet<Class<?>>();
 	public ApplicationConfiguration(){
 
-	     //singletons.add();
+	     singletons.add(new EnderecoCepResource());
 
 	}
 	
