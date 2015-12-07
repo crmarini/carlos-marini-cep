@@ -29,7 +29,7 @@ public class EnderecoCepRepositoryImpl implements EnderecoCepRepository {
 	}
 
 	@Override
-	public EnderecoCep getEnderecoCep(Integer numeroCep) {
+	public EnderecoCep getEnderecoCep(String numeroCep) {
 		 TypedQuery<EnderecoCep> query = manager.createNamedQuery("enderecoCep.findEnderecoCep", EnderecoCep.class);
 		 query.setParameter("num",numeroCep);
 		

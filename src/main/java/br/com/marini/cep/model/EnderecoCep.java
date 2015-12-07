@@ -9,28 +9,37 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="tb_edco_cep")
-@NamedQuery(name="enderecoCep.findEnderecoCep", query="SELECT end FROM EnderecoCep end WHERE end.numeroCep= :num")
+@Table(name = "tb_edco_cep")
+@NamedQuery(name = "enderecoCep.findEnderecoCep", query = "SELECT end FROM EnderecoCep end WHERE end.numeroCep= :num")
 public class EnderecoCep {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)  
-	@Column(name="id_cep")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_cep")
 	private Integer idCep;
-	
-	@Column(name="nu_cep")
-	private Integer numeroCep;
-	
-	@Column(name="ds_edco_cep")
+
+	@Column(name = "nu_cep")
+	private String numeroCep;
+
+	@Column(name = "ds_edco_cep")
 	private String enderecoCep;
-	
-	@Column(name="ds_bair_edco_cep")
+
+	@Column(name = "ds_bair_edco_cep")
 	private String bairroEnderecoCep;
-	
-	@Column(name="ds_cdde_edco_cep")
+
+	@Column(name = "ds_cdde_edco_cep")
 	private String cidadeEnderecoCep;
-	
-	@Column(name="ds_estd_edco_cep")
+
+	@Column(name = "ds_estd_edco_cep")
 	private String estadoEnderecoCep;
+
+	public EnderecoCep(String numeroCep, String enderecoCep, String bairroEnderecoCep, String cidadeEnderecoCep,
+			String estadoEnderecoCep) {
+		this.numeroCep=numeroCep;
+		this.enderecoCep=enderecoCep;
+		this.bairroEnderecoCep=bairroEnderecoCep;
+		this.cidadeEnderecoCep=cidadeEnderecoCep;
+		this.estadoEnderecoCep=estadoEnderecoCep;
+	}
 
 	public Integer getIdCep() {
 		return idCep;
@@ -40,11 +49,11 @@ public class EnderecoCep {
 		this.idCep = idCep;
 	}
 
-	public Integer getNumeroCep() {
+	public String getNumeroCep() {
 		return numeroCep;
 	}
 
-	public void setNumeroCep(Integer numeroCep) {
+	public void setNumeroCep(String numeroCep) {
 		this.numeroCep = numeroCep;
 	}
 

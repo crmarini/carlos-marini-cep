@@ -11,7 +11,7 @@ public class EnderecoCepDTO implements Serializable {
 	private static final long serialVersionUID = -6474609899407226445L;
 
 	private String status;
-	private Integer numeroCep;
+	private String numeroCep;
 	private String enderecoCep;
 	private String bairroEnderecoCep;
 	private String cidadeEnderecoCep;
@@ -22,7 +22,7 @@ public class EnderecoCepDTO implements Serializable {
 
 	}
 
-	public EnderecoCepDTO(String status, Integer numeroCep, String enderecoCep, String bairroEnderecoCep,
+	public EnderecoCepDTO(String status, String numeroCep, String enderecoCep, String bairroEnderecoCep,
 			String cidadeEnderecoCep, String estadoEnderecoCep) {
 		super();
 		this.status = status;
@@ -48,11 +48,11 @@ public class EnderecoCepDTO implements Serializable {
 	}
 
 	@XmlElement
-	public Integer getNumeroCep() {
+	public String getNumeroCep() {
 		return numeroCep;
 	}
 
-	public void setNumeroCep(Integer numeroCep) {
+	public void setNumeroCep(String numeroCep) {
 		this.numeroCep = numeroCep;
 	}
 

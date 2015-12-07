@@ -10,5 +10,5 @@ public interface EnderecoCepRepository{
 	
 	public void CadastrarEnderecoCep(EnderecoCep endereco);
 	
-	public EnderecoCep getEnderecoCep(Integer numeroCep);
+	public EnderecoCep getEnderecoCep(String numeroCep);
 }
